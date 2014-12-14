@@ -1,3 +1,14 @@
+%
+%	Trabalho Pratico 2 - Frigorificos
+%	Autores: Eduardo Almeida e Joao Almeida
+%
+%	Resolucao do problema proposto: 
+%		projeto([[C1, C2, C3], [C4, C5, C6], [C7, C8, C9]], RV, [20, 20, 20], [10, 30, 20], [[10, 20, 15], [5, 25, 10], [5, 5, 30]]).
+%
+%	Resolucao de outro problema arbitrario: 
+%		projeto([[C1, C2, C3], [C4, C5, C6], [C7, C8, C9], [C10, C11, C12]], RV, [20, 20, 20, 5], [10, 30, 20], [[10, 20, 15], [5, 25, 10], [5, 5, 30], [3, 3, 3]]).
+%
+
 :- use_module(library(clpfd)).
 :- use_module(library(lists)).
 
@@ -92,8 +103,6 @@ calculate_capacities([CFHeader | CFTail], [CapHeader | CapTail]) :-
 %
 
 projeto(ClienteFabrica, ResultValue, Capacidades, Necessidades, Custos) :-
-	ClienteFabrica = [[C1, C2, C3], [C4, C5, C6], [C7, C8, C9]],
-	
 	flatten(ClienteFabrica, ClienteFabricaFlattened),
 	
 	domain(ClienteFabricaFlattened, 1, 1000),
